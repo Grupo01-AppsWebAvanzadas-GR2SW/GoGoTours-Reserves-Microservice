@@ -20,7 +20,7 @@ from src.infrastructure.services.tourist_packages.default_tourist_packages_servi
 from src.rabbitmq.consumer import Consumer
 from src.webapi.routes.reserves_routes import reserves_router
 
-initialize_firebase("/etc/secrets/firebase-credentials.json")
+initialize_firebase()
 app = FastAPI()
 app.dependency_overrides = {
     TouristPackagesRepositoryAsync: FirestoreTouristPackagesRepositoryAsync,
