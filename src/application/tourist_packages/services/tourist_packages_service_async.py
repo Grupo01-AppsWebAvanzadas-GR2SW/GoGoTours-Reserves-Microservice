@@ -10,3 +10,7 @@ class TouristPackagesServiceAsync(ABC):
     @abstractmethod
     async def delete_package(self, ref_id: str):
         pass
+
+    @abstractmethod
+    async def is_available_to_reserve(self, ref_id: str):
+        pass

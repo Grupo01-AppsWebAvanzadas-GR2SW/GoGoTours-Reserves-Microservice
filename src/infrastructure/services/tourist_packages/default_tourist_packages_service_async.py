@@ -29,3 +29,6 @@ class DefaultTouristPackagesServiceAsync(TouristPackagesServiceAsync):
             return True
         else:
             return False
+
+    async def is_available_to_reserve(self, ref_id: str) -> bool:
+        return True if await self._tourist_packages_repository_async.get_by_ref_id_async(ref_id) is None else False
